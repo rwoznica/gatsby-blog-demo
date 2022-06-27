@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 
 export default function HeroPost({
   title,
+  meta1,
   coverImage,
   date,
   excerpt,
@@ -21,7 +22,7 @@ export default function HeroPost({
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link to={`/posts/${slug}`} className="hover:underline">
-              {title}
+              {title} // {meta1}
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
