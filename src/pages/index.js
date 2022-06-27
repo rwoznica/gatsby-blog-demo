@@ -17,6 +17,7 @@ export default function Index({ data: { allPosts, site, blog } }) {
       {heroPost && (
         <HeroPost
           title={heroPost.title}
+          meta1={heroPost.meta1}
           coverImage={heroPost.coverImage}
           date={heroPost.date}
           author={heroPost.author}
@@ -44,6 +45,7 @@ export const query = graphql`
     allPosts: allDatoCmsPost(sort: { fields: date, order: DESC }, limit: 20) {
       nodes {
         title
+        meta1
         slug
         excerpt
         date
