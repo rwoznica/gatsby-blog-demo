@@ -19,6 +19,7 @@ export default function Post({ data: { site, post, morePosts } }) {
           coverImage={post.coverImage}
           date={post.date}
           author={post.author}
+          meta1={post.meta1}
         />
         <PostBody content={post.content} />
       </article>
@@ -40,6 +41,7 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       title
+      meta1
       slug
       content {
         value
